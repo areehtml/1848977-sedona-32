@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алика Ефременко](https://up.htmlacademy.ru/htmlcss/32/user/1848977).
-* Наставник: [Мария Коршунова](https://htmlacademy.ru/profile/id193628).
+* Наставник: [Лиза Пак](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
