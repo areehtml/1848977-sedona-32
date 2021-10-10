@@ -37,6 +37,10 @@ body {
   line-height: 26px;
 }
 
+.page-header-logo {
+  width: 138px;
+  margin: 0 151px;
+}
 .navigation {
   display: flex;
   width: 1200px;
@@ -87,6 +91,13 @@ body {
   background-repeat: no-repeat;
 }
 
+.main-inner {
+  color: black;
+  background-color: #FFFFFF;
+  background-image: url("../img/catalog-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 .advantages-banner {
   text-align: center;
   font-size: 22px;
