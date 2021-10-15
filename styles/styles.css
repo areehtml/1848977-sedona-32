@@ -78,6 +78,11 @@ body {
   margin-left: auto;
 }
 
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+}
+
 .navigation-logo {
 width: 138px;
 margin: 0 auto;
