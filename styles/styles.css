@@ -74,7 +74,6 @@ body {
 }
 
 .navigation-user {
-  max-width: 250px;
   margin-left: auto;
 }
 
@@ -201,7 +200,7 @@ body {
 .advantages-item {
   display: flex;
   align-items: center;
-  width: 1200px;
+  width: 400px;
   text-align: center;
   font-size: 18px;
   line-height: 21px;
@@ -212,8 +211,14 @@ body {
 .advantages-padding {
   padding-right: 75px;
   padding-left: 75px;
+  padding-top: 79px;
+  padding-bottom: 79px;
 }
 
+.advantages-line {
+  padding-bottom: 79px;
+  margin: 0;
+}
 .advantages h3 {
   font-weight: 700;
   font-size: 24px;
@@ -292,6 +297,13 @@ body {
 
 }
 
+.footer-social-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 150px;
+}
+
 .site-credits {
   width: 240px;
 }
@@ -321,6 +333,8 @@ body {
   font-size: 60px;
   line-height: 78px;
   color: #FFFFFF;
+  margin: 0;
+  padding-top: 35px;
 }
 
 .breadcrumbs-link {
@@ -333,6 +347,10 @@ body {
   color: black;
 }
 
+.catalog-filter {
+  display: flex;
+  width: 1200px;
+}
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
@@ -343,7 +361,11 @@ body {
   line-height: 23px;
 }
 
-
+.filter-row {
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+}
 .filter-group {
   display: flex;
   flex-direction: column;
@@ -373,10 +395,23 @@ body {
 }
 
 .housing-list {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
   padding-left: 0;
   margin: 0;
 }
 
+.housing-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.raiting-and-stars {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
 .housing-card-title {
   font-weight: 700;
   font-size: 24px;
