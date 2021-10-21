@@ -212,6 +212,13 @@ body {
   padding-bottom: 79px;
 }
 
+.advantages-padding-bigger {
+  padding-right: 75px;
+  padding-left: 75px;
+  padding-top: 98px;
+  padding-bottom: 98px;
+}
+
 .advantages-line {
   padding-bottom: 79px;
   margin: 0;
@@ -224,6 +231,17 @@ body {
   text-transform: uppercase;
 }
 
+.advantage {
+  margin: 0;
+}
+.advantage-description {
+  margin: 0;
+  margin-top: 25px;
+}
+
+.advantages-icon {
+  margin-bottom: 23px;
+}
 .advantages-blue {
   color: white;
   background-color: #83B3D3;
@@ -335,7 +353,8 @@ body {
   width: 150px;
   flex-wrap: wrap;
   margin: 0;
-  padding-left: 72px;
+  padding: 0;
+  margin-left: 72px;
 }
 
 .footer-social-item {
@@ -549,6 +568,7 @@ body {
 
 .pagination-container {
   display: flex;
+  box-sizing: border-box;
   width: 1200px;
   justify-content: space-between;
   padding: 25px;
