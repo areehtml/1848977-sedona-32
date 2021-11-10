@@ -725,6 +725,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   color: white;
+  text-decoration: none;
 }
 
 .newsletter-catalog {
@@ -804,13 +805,11 @@ body {
 }
 
 .button-mode:hover {
-  border: none;
-  outline: 2px solid #83B3D3;
+  border: 2px solid #83B3D3;
 }
 
 .button-mode:focus {
-  border: none;
-  outline: 2px solid #83B3D3;
+  border: 2px solid #83B3D3;
 }
 
 .sorting-view-modes {
@@ -849,17 +848,36 @@ body {
   position: relative;
   display: flex;
   justify-content: flex-start;
-  /* background-image: url(../img/svg/divider-thin.svg);
-  background-size: 1056px auto;
-  background-repeat: no-repeat; */
+  padding-top: 28px;
 }
+
 
 .housing-card::before {
   content: "";
   position: absolute;
-  border-top: 1px solid #E6E6E6;
-  top: 0px;
-  bottom: 181px;
+  top: 0;
+  left    : 72px;
+  bottom  : 0;
+  height  : 1px;
+  width   : 1056px; 
+  border: 1px solid #E6E6E6;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.housing-card:last-child::after {
+  content: "";
+  position: absolute;
+  top: 180px;
+  left    : 72px;
+  bottom  : 0;
+  height  : 1px;
+  width   : 1056px; 
+  border: 1px solid #E6E6E6;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 .housing-card-column-picutre {
@@ -879,6 +897,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 160px;
+  margin: 0;
 }
 
 .housing-card-title {
@@ -924,10 +943,9 @@ body {
 .housing-card-buttons {
   display: grid;
   grid-template-columns: 151px 160px;
-  grid-template-rows: auto auto 37px;
   gap: 8px;
-  grid-row: 3 / 4;
   margin-top: 31px;
+  margin-bottom: 30px;
 }
 
 .housing-card-button-more:hover {
@@ -1018,11 +1036,27 @@ body {
 }
 
 .pagination-show-more {
+  position: relative;
   background-color: #83B3D3;
   width: 625px;
   margin-top: 31px;
   padding: 9px 0;
   border-radius: 4px;
+  margin-bottom: 30px;
+}
+.pagination-show-more::before {
+  content: "";
+  position: absolute;
+  top: 85px;
+  left    : -216px;
+  bottom  : 0;
+  height  : 1px;
+  width   : 1056px; 
+  border: 1px solid #E6E6E6;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
 }
 
 .pagination-show-more:hover {
