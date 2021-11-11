@@ -80,7 +80,7 @@
               <span class="visually-hidden">Главная</span></a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Гостиницы</a>
+            <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <section class="catalog-products">
@@ -147,10 +147,12 @@
                 </fieldset>
               </div>
               <div class="filter-group">
+          
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <div class="range-empty">
-                    <div class="range-chosen">
+                  <div class="range">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; right: 60px;">
                       <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
@@ -159,13 +161,17 @@
                       </button>
                     </div>
                   </div>
+                  <div class="range-wrapper-inputs">
                   <label class="catalog-filter-label">
-                    от <input class="catalog-filter-input" type="number" name="min-price" placeholder="0">
+                     <input class="catalog-filter-input" type="number" name="min-price" placeholder="0">  от
                   </label>
 
-                  <label class="catalog-filter-label">
-                    до <input class="catalog-filter-input" type="number" name="max-price" placeholder="9000">
+                  <label class="catalog-filter-label label-element">
+                   <input class="catalog-filter-input" type="number" name="max-price" placeholder="9000"> до
                   </label>
+                </div>
+              
+                </div>
                 </fieldset>
               </div>
               <div class="filter-group">
