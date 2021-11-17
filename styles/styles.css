@@ -821,6 +821,10 @@ body {
   outline: 3px solid #FFFFFF;
 }
 
+.apply-button:active {
+  color:rgba(255, 255, 255, 0.3);
+}
+
 .cancel-button {
   align-self: center;
   width: fit-content;
@@ -880,7 +884,7 @@ body {
 }
 
 /* фокус почему-то не срабатывает */
-.control:focus .control-mark {
+.control-input:focus {
   outline: 3px solid #83B3D3;
 }
 
@@ -906,6 +910,18 @@ body {
   background-color: #3F5E72;
   border-radius: 50%;
   content: "";
+}
+
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.control-input:active {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-filter-list {
@@ -1411,8 +1427,6 @@ body {
   top: 41px;
   left: 50%;
   transform: translate(-50%, 0);
-  /* top:  41px;
-  right: -192px; */
   z-index: 1;
   box-sizing: border-box;
   width: 400px;
@@ -1424,7 +1438,7 @@ body {
   min-height: 232px;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  border: 1px solid #E6E6E6;
+  /* border: 1px solid #E6E6E6; */
   /* display: none; */
 }
 
@@ -1433,12 +1447,15 @@ body {
 .popover::before {
   position: absolute;
   content: "";
+  display: block;
   background-image: url(../img/svg/popover-arrow.svg);
   background-repeat: no-repeat;
-  background-position: -9px center;
   left: 50%;
+  top: -8px;
   transform: translate(-50%, 0);
-  z-index: 2;
+  width: 20px; 
+  height: 9px;
+
 }
 
 .popover-content {
@@ -1456,6 +1473,7 @@ body {
   gap: 17px;
   text-decoration: none;
   border-radius: 10px;
+  color: #000000;
 }
 
 .favorite-item-link:hover {
@@ -1494,6 +1512,8 @@ body {
 .favorite-items-list {
   margin: 0;
   padding: 25px;
+  border: 1px solid #E6E6E6;
+  border-radius: 20px;
 }
 
 .favorite-item-picture {
@@ -1509,6 +1529,7 @@ body {
   padding: 0;
   align-self: start;
   border-radius: 10px;
+  margin: 0;
 
 }
 
@@ -1532,16 +1553,20 @@ body {
 }
 
 .popover-favorite-button {
+  position: absolute;
   background-color: #756257;
   width: 400px;
-  height: 60px;
-  position: absolute;
   border-radius: 0px 0px 20px 20px;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
   padding: 20px 0;
+  margin: 0;
+  left: 50%;
+  margin-left: -200px;
 }
+
+
 
 .popover-favorite-button:hover {
   background: #615048;
@@ -1579,7 +1604,7 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 54;
+  top: 54px;
   right: 70px;
   width: 53px;
   height: 53px;
@@ -1610,6 +1635,7 @@ body {
   font-size: 16px;
   line-height: 40px;
   color: #FF5757;
+  grid-column: 2/3;
 }
 
 .modal-reminder {
@@ -1618,15 +1644,9 @@ body {
   font-size: 16px;
   line-height: 40px;
   color: #333333;
+  grid-column: 2/3;
 }
 
-.form-adult-count {
-  display: inline-block;
-}
-
-.form-children-count {
-  display: inline-block;
-}
 
 .modal-forms {
   display: flex;
@@ -1635,22 +1655,44 @@ body {
 }
 
 .form-arrival {
+  position: relative;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 155px 420px;
+}
 
-
+.form-arrival::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../img/svg/calendar.svg) no-repeat;
+  top: 14px;
+  right: 17px;
+  
 }
 
 .form-leaving {
+  position: relative;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 155px 420px;
 }
 
+.form-leaving::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../img/svg/calendar.svg) no-repeat;
+  top: 14px;
+  right: 17px;
+}
+
 .form-adult-count {
+  position: relative;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
@@ -1658,7 +1700,32 @@ body {
   grid-template-columns: 155px 133px;
 }
 
+
+.minus {
+  position: absolute;
+  display: inline-block;
+  border: none;
+  top: 12.5px;
+  right: 101px;
+  padding: 0;
+  z-index: 5;
+  
+}
+
+
+.plus {
+  position: absolute;
+  display: inline-block;
+  border: none;
+  top: 12.5px;
+  right: 19px;
+  padding: 0;
+}
+
+
 .form-children-count {
+  position: relative;
+  display: inline-block;
   padding: 0;
   margin: 0;
   margin-bottom: 40px;
@@ -1666,12 +1733,52 @@ body {
   grid-template-columns: 97px 133px;
 }
 
-.modal-people-count {
-  display: flex;
-  gap: 56px;
-
+.tooltip {
+  position: absolute;
+  top: 376px;
+  right: 106px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  width: 256px;
+  background: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #FFFFFF;
+  padding: 18px;
 }
 
+.tooltip::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 9px;
+  background: url(../img/svg/tooltip-arrow.svg) no-repeat;
+  top: -9px;
+  left: 120px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-content {
+  height: 100%;
+}
+
+
+.tooltip-text {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.modal-people-count {
+  position: relative;
+  display: flex;
+  gap: 56px;
+}
 
 .modal-search-button {
   width: 575px;
@@ -1723,6 +1830,14 @@ body {
 
 }
 
+.adult-count-field {
+  position: relative;
+  text-align: center;
+  padding-left: 0;
+}
+
+
+
 .modal-field-element {
   position: relative;
 }
@@ -1737,46 +1852,6 @@ body {
   top: 24px;
 }
 
-.tooltip {
-  position: absolute;
-  bottom: 23px;
-  right: 106px;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "PT Sans", sans-serif;
-  width: 256px;
-  background: #333333;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  color: #FFFFFF;
-  padding: 18px;
-}
-
-.tooltip::before {
-  content: "";
-  position: absolute;
-  width: 19px;
-  height: 9px;
-  background: url(../img/svg/tooltip-arrow.svg) no-repeat;
-  top: -9px;
-  left: 120px;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-.tooltip-content {
-  height: 100%;
-}
-
-
-.tooltip-text {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -336,44 +336,52 @@
           <div class="modal-arrival">
             <form class="modal-hotel-search" action="https://echo.htmlacademy.ru/" method="post">
               <p class="field-group form-arrival">
-                <span class="modal-form-label form-label-icon">
-                  <label for="arrival-date">
+                
+                  <label class="modal-form-label" for="arrival-date">
                     Дата заезда:</label>
-                </span>
+                
                 <input class="field modal-field" type="text" id="arrival-date" name="arrival-date"
                   placeholder="27 апреля 2020">
-                <span class="empty"></span>
+                
                 <span class="modal-error-text">Мы не можем отправить вас в прошлое.</span>
               </p>
           </div>
-          <div class="modal-leaving">
+          
             <p class="field-group form-leaving">
-              <span class="modal-form-label form-label-icon">
-                <label for="leaving-date">
+                <label class="modal-form-label" for="leaving-date">
                   Дата выезда:</label>
 
-              </span>
               <input class="field modal-field" type="text" id="leaving-date" name="leaving-date"
                 placeholder="1 сентября 2021">
-              <span class="empty"></span>
+              
               <span class="modal-reminder">На эти даты есть свободные номера. Пока есть.</span>
             </p>
-          </div>
+          
           <div class="modal-people-count">
             <p class="field-group form-adult-count">
-              <span class="modal-form-label form-label-icon">
-                <label for="adult-count">
+              
+                <label class="modal-form-label" for="adult-count">
                   Взрослые:</label>
-
-              </span>
-              <input class="field modal-field" type="number" id="adult-count" name="adult-count" placeholder="2">
+                
+                  <!-- <div class="input-buttons"> -->
+             <button class="minus people-quanity" type="button">
+              <svg class="minus-svg" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="M0 0v1h13V0H0Z" fill="#000"/></svg>
+             </button>
+            
+            
+              <input class="field modal-field adult-count-field" type="number" id="adult-count" name="adult-count" placeholder="2">
+              <button class="plus people-quanity" type="button">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000"/></svg>
+               </button>
+              <!-- </div> -->
+              
             </p>
             <p class="field-group form-children-count">
-              <span class="modal-form-label form-label-icon modal-info-icon">
-                <label for="children-count">
+             
+                <label class="modal-form-label modal-info-icon" for="children-count">
                   Дети:</label>
 
-              </span>
+              
               <input class="field modal-field modal-field-element" type="number" id="children-count"
                 name="children-count" placeholder="2">
             </p>
