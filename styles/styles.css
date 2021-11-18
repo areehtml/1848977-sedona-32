@@ -158,39 +158,7 @@ body {
   text-underline-offset: 24px;
 }
 
-/* .main-menu {
-  position: relative;
-}
-
-.main-menu-current::before {
-  position: absolute;
-  top: 44px;
-  width: 81px;
-  height: 2px;
-  background-color: #756257;
-  content: "";
-}
-
-.catalog-menu-current {
-  position: relative;
-}
-
-.catalog-menu-current::before {
-  position: absolute;
-  top: 44px;
-  width: 109px;
-  height: 2px;
-  background-color: #756257;
-  content: "";
-} */
-
 .navigation-icon {
-  /* position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -879,13 +847,17 @@ body {
   margin-left: 19px;
 }
 
-.control:hover .control-mark {
+.inputl:hover .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* фокус почему-то не срабатывает */
-.control-input:focus {
+
+input:focus + .control-mark {
   outline: 3px solid #83B3D3;
+}
+
+input:active + .control-mark {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .control-input[type="checkbox"]:checked+.control-mark {
@@ -912,17 +884,8 @@ body {
   content: "";
 }
 
-.control:hover .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-}
 
-.control-input:focus {
-  outline: 3px solid #83B3D3;
-}
 
-.control-input:active {
-  background: rgba(255, 255, 255, 0.3);
-}
 
 .catalog-filter-list {
   margin: 0;
@@ -1585,6 +1548,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(242, 242, 242, 0.8);
+  display: none;
 }
 
 .modal {
@@ -1616,6 +1580,17 @@ body {
   cursor: pointer;
   border-radius: 50%;
 }
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+  
+}
+
+.modal-close-button:focus {
+  outline: 3px solid #83B3D3;
+
+}
+
 
 .modal-title {
   margin: 0;
@@ -1700,15 +1675,37 @@ body {
   grid-template-columns: 155px 133px;
 }
 
+.people-count-field{
+  text-align: center;
+}
 
-.minus {
+
+
+/* .adult-count-field {
+  position: relative;
+  text-align: center;
+  padding-left: 0;
+} */
+
+/* .people-quanity {
+  display: flex;
+  width: 25px;
+  height: 25px;
+} */
+
+/* .input-buttons {
+  display: flex;
+  justify-content: space-between;
+} */
+
+/* .minus {
   position: absolute;
   display: inline-block;
   border: none;
-  top: 12.5px;
-  right: 101px;
   padding: 0;
   z-index: 5;
+  cursor: pointer;
+  
   
 }
 
@@ -1717,10 +1714,30 @@ body {
   position: absolute;
   display: inline-block;
   border: none;
-  top: 12.5px;
-  right: 19px;
   padding: 0;
+  top: 18px;
+
+} */
+
+/* .input-buttons {
+  display: flex;
+
+} */
+
+/* .minus {
+  display: inline-block;
+  padding: 0;
+  height: 50px;
+  
 }
+
+.plus {
+    display: inline-block;
+    padding: 0;
+    height: 50px;
+    
+  } */
+
 
 
 .form-children-count {
@@ -1806,6 +1823,22 @@ body {
   background: #F2F2F2;
   border: none;
   border-radius: 4px;
+}
+
+.modal-field:hover {
+  background: #E6E6E6;
+}
+
+.modal-field:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.modal-field-active {
+  outline: 2px solid #000000;
+  background: #FFFFFF;
+}
+
+.date-field {
   padding-left: 19px;
 }
 
@@ -1816,6 +1849,7 @@ body {
 .modal-info-icon {
   position: relative;
 }
+
 
 .modal-info-icon::before {
   position: absolute;
@@ -1830,27 +1864,7 @@ body {
 
 }
 
-.adult-count-field {
-  position: relative;
-  text-align: center;
-  padding-left: 0;
-}
 
-
-
-.modal-field-element {
-  position: relative;
-}
-
-.modal-field-element:before {
-  position: absolute;
-  content: "";
-  background: url(../img/svg/minus.svg) no-repeat;
-  height: 1px;
-  width: 13px;
-  left: 19px;
-  top: 24px;
-}
 
 
 input::-webkit-outer-spin-button,
