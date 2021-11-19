@@ -364,46 +364,53 @@
                 <label class="modal-form-label" for="adult-count">
                   Взрослые:</label>
                 
-                  <!-- <div class="input-buttons">
+                  <div class="input-buttons">
              <button class="minus people-quanity" type="button">
-              <svg class="minus-svg" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".3" d="M0 0v1h13V0H0Z" fill="#000"/></svg>
-             </button> -->
+              <svg class="input-icons-svg" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v1h13V0H0Z"/></svg>
+             </button>
             
             
               <input class="field modal-field adults people-count-field" type="number" id="adult-count" name="adult-count" placeholder="2">
-              <!-- <button class="plus people-quanity" type="button">
-                
+              <button class="plus people-quanity" type="button">
+                <svg class="input-icons-svg" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/></svg>
                </button>
-              </div> -->
+              </div>
               
               </div>
             <div class="field-group form-children-count">
-             
+             <div class="label-with-button">
                 <label class="modal-form-label modal-info-icon" for="children-count">
-                  Дети:</label>
+                  Дети:</label> 
+                  <button class="info-icon-button" type="button">
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12.5" cy="12.5" r="12.5"/><g clip-path="url(#a)" fill="#fff"><path d="M12 17h1v-6h-1v6ZM13 8h-1v1h1V8Z"/></g><defs><clipPath id="a"><path fill="#fff"  d="M0 0h1v9H0z"/></clipPath></defs></svg>
+                  </button>
+                  <div class="tooltip">
+                    <div class="tooltip-content">
+                      <div class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети
+                        до 6 лет размещаются бесплатно.</div>
+                </div>
+                </div>
+                </div>
+                
 
-               
-                <!-- <button class="minus people-quanity" type="button">
-                  
-                 </button> -->
-              <input class="field modal-field people-count-field" type="number" id="children-count"
+                  <div class="input-buttons">
+                    <button class="minus people-quanity" type="button">
+                     <svg class="input-icons-svg" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v1h13V0H0Z"/></svg>
+                    </button>
+                
+              <input class="field modal-field people-count-field children-count-input" type="number" id="children-count"
                 name="children-count" placeholder="2">
-                <!-- <button class="plus people-quanity" type="button">
-                  
-                 </button> -->
+                <button class="plus people-quanity" type="button">
+                  <svg class="input-icons-svg" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path  d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" /></svg>
+                 </button>
                 
                 </div>
           </div>
-        </div>
+          </div>
         </form>
       </section>
       <button class="button modal-search-button" type="submit">Найти</button>
-      <div class="tooltip">
-        <div class="tooltip-content">
-          <div class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети
-            до 6 лет размещаются бесплатно.</div>
-
-        </div>
+  
 
         </section>
 
